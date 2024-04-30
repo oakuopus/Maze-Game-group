@@ -1,3 +1,5 @@
+var total = 0;
+
 $(document).ready(function() {
     var s = 0, z = 0
     //Maze Size/Dimensions
@@ -25,6 +27,7 @@ $(document).ready(function() {
 
             //Check to see if the player reaches the end
             if (playerX === 480 && playerY === 480) {
+                alert("Congratulations! you Completed this level! Your score is: " + (500 - total));
                 window.location = "winPage2.html";
             }
             if (playerX === 480 && playerY === 400 && z == 0) {
@@ -369,4 +372,29 @@ $(document).ready(function() {
     $("#start").css({
         backgroundcolor: "white",
     })
+
+
+    
+
 })
+
+var seconds = 0;
+var minutes = 0;
+var current;
+function getTime() {
+    seconds++;
+    total++;
+    //if the time is 60 seconds, it converts it into a minute
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+    //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
+    var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
+    document.getElementById('countUp').innerHTML = finalTime;
+    // var maxPoints = 10200;
+    // var scaleFactor = 40;
+    // var points = (maxPoints - seconds) / scaleFactor;
+    // document.getElementById('score1').innerHTML = "Score: " + final
+}
+var timer = setInterval(getTime,1000)

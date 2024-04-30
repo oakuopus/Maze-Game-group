@@ -1,3 +1,5 @@
+var total = 0;
+
 $(document).ready(function() {
 
     //Maze Size/Dimensions
@@ -29,6 +31,7 @@ $(document).ready(function() {
 
             //Check to see if the player reaches the end
             if(playerX === 380 && playerY === 380){
+              alert("Congratulations! you Completed this level! Your score is: " + (500 - total));
               window.location = "winPage1.html"
             }
 
@@ -257,3 +260,25 @@ $(document).ready(function() {
     //Create the player and append it to the board
     $('#maze').append('<div class="player" id="player" style="top: '+ playerY + 'px; left: ' + playerX + 'px;"> <img src="../assests/Idle (1).png" style="max-height:20px; max-width:20px;"></div>')
   })
+
+
+  var seconds = 0;
+var minutes = 0;
+var current;
+function getTime() {
+    seconds++;
+    total++;
+    //if the time is 60 seconds, it converts it into a minute
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+    //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
+    var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
+    document.getElementById('countUp').innerHTML = finalTime;
+    // var maxPoints = 10200;
+    // var scaleFactor = 40;
+    // var points = (maxPoints - seconds) / scaleFactor;
+    // document.getElementById('score1').innerHTML = "Score: " + final
+}
+var timer = setInterval(getTime,1000)
