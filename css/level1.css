@@ -10,7 +10,7 @@ html {
 
 @font-face {
   font-family: myFont;
-  src: url(../assests/SantasSleighFull\ Deluxe.ttf);
+  src: url(../assests/SantasSleighFull.ttf);
 }
 #maze {
   margin: 20px auto;
@@ -62,10 +62,25 @@ html {
   border-radius: 5px;
 }
 
+#title {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
 #text {
   color: black;
   font-family: myFont;
   animation: animate 3s linear infinite;
+}
+
+.rules {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#rules {
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: black;
 }
 
 @keyframes animate {
@@ -81,6 +96,7 @@ html {
 }
 #one {
   color: #f8c7cc;
+  -webkit-text-stroke-color: black;
 }
 
 #countUp {
