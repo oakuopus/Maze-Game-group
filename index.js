@@ -12,5 +12,5 @@ function nextPage() {
     window.location="rules.html";
 }
 function nextPage1() {
-    window.location="/Level 1/level1.html";
+    window.location="./Level 1/level1.html";
 }
