@@ -29,7 +29,7 @@ $(document).ready(function() {
 
             //Check to see if the player reaches the end
             if(playerX === 380 && playerY === 380){
-                alert("Congratulations you made it throught maze")
+                window.location="../Level 2/index.html";
             }
 
         }
