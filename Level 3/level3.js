@@ -60,28 +60,36 @@ $(document).ready(function() {
         }
     }
   
-      // Keypress Event Listener
-      $(document).keydown(function(e){
+    // Keypress Event Listener
+    $(document).keydown(function(e){
         switch (e.which) {
             case 37: // Left arrow
               movePlayer(-20, 0);
-              // Update
               break;
             case 38: // Up arrow
               movePlayer(0, -20);
-              // updater(0,-20)
               break;
             case 39: // Right arrow
               movePlayer(20, 0);
-              // updater(20,0)
               break;
             case 40: // Down arrow
               movePlayer(0, 20);
-              // updater(0,20)
               break;
+            case 65: // Left arrow
+                movePlayer(-20, 0);
+                break;
+            case 87: // Up arrow
+                movePlayer(0, -20);
+                break;
+            case 68: // Right arrow
+                movePlayer(20, 0);
+                break;
+            case 83: // Down arrow
+                movePlayer(0, 20);
+                break;
           }
     })
-  
+
   
   
   
