@@ -26,7 +26,13 @@ $(document).ready(function() {
             if(playerX === 480 && playerY === 480){
                 alert("Congratulations you made it throught maze")
             }
-
+            if (playerX === 480 && playerY === 400) {
+                $('#maze').append('<div class="wall" style="top: 440px; left: 480px;"></div>');
+            }
+            if (playerX === 420 && playerY === 380) {
+                $('#maze').append('<div class="wall" style="top: 380px; left: 440px;"></div>');
+                console.log(1)
+            }
         }
     }
 
@@ -62,6 +68,7 @@ $(document).ready(function() {
 
     //Create Maze Walls
     var wallCoordinates = [
+        {top:440, left:420},
         {top:20, left:20},
         {top:20, left:40},
         {top:20, left:60},
@@ -364,14 +371,14 @@ $(document).ready(function() {
     var seconds = 0;
     var minutes = 0;
     function getTime() {
-    seconds++;
-      //if the time is 60 seconds, it converts it into a minute
-    if (seconds == 60) {
-        seconds = 0;
-        minutes++;
-    }
-      //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
-    var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
-    document.getElementById('countUp').innerHTML = finalTime;
+        seconds++;
+        //if the time is 60 seconds, it converts it into a minute
+        if (seconds == 60) {
+            seconds = 0;
+            minutes++;
+        }
+        //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
+        var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
+        document.getElementById('countUp').innerHTML = finalTime;
     }
 })
