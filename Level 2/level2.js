@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var s = 0, z = 0
     //Maze Size/Dimensions
     var mazeHeight = 500
     var mazeWidth = 500
@@ -23,15 +24,17 @@ $(document).ready(function() {
             }
 
             //Check to see if the player reaches the end
-            if(playerX === 480 && playerY === 480){
-                alert("Congratulations you made it throught maze")
+            if (playerX === 480 && playerY === 480) {
+                alert("Congrats, your time was" + /*JUVI ADD SCORE/TIME IDK*/0)
+                window.location = "../Level 3/index.html";
             }
-            if (playerX === 480 && playerY === 400) {
+            if (playerX === 480 && playerY === 400 && z == 0) {
                 $('#maze').append('<div class="wall" style="top: 440px; left: 480px;"></div>');
+                z++
             }
-            if (playerX === 420 && playerY === 380) {
-                $('#maze').append('<div class="wall" style="top: 380px; left: 440px;"></div>');
-                console.log(1)
+            if (playerX === 420 && playerY === 380 && s == 0) {
+                $('#maze').append('<div class="wall" style="top: 400px; left: 420px;"></div>');
+                s++
             }
         }
     }
