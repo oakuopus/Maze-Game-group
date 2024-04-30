@@ -18,5 +18,5 @@ function nextPage2() {
     window.location="../Level 2/index.html";
 }
 function nextPage3() {
-    // NOAEL PUT YOUR LINK TO YOUR MAZE HERE
+    window.location="../Level 3/index.html";
 }
