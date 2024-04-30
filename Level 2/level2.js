@@ -362,7 +362,7 @@ $(document).ready(function() {
     }
 
     //Create the player and append it to the board
-    $('#maze').append('<div class="player" id="player" style="top: '+ playerY + 'px; left: ' + playerX + 'px; ;"><img style="max-height: 20px; max-width: 20px;" src="./assests/Idle (1).png" alt=""></div>')
+    $('#maze').append('<div class="player" id="player" style="top: '+ playerY + 'px; left: ' + playerX + 'px; ;"><img style="max-height: 20px; max-width: 20px;" src="../assests/Idle (1).png" alt=""></div>')
 
     $("#start").css({
         backgroundcolor: "white",
