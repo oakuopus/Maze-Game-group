@@ -361,6 +361,17 @@ $(document).ready(function() {
         backgroundcolor: "white",
     })
 
-    var start = new Date; setInterval(function() { $('.Timer').text((new Date - start) / 1000 + " Seconds"); }, 1000);
-    console.log(start)
+    var seconds = 0;
+    var minutes = 0;
+    function getTime() {
+    seconds++;
+      //if the time is 60 seconds, it converts it into a minute
+    if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+    }
+      //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
+    var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
+    document.getElementById('countUp').innerHTML = finalTime;
+    }
 })
