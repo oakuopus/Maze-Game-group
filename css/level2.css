@@ -1,6 +1,7 @@
-body #level1 {
+body#level2 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 
 @font-face {
   font-family: myFont;
-  src: url(../assests/SantasSleighFull\ Deluxe.ttf);
+  src: url(../assests/SantasSleighFull.ttf);
 }
 #maze {
   margin: 20px auto;
@@ -86,8 +87,4 @@ html {
 #countUp {
   color: #f8c7cc;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-html {
-  overflow: hidden;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=level2.css.map */

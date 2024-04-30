@@ -1,6 +1,7 @@
 body#level1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 html {
@@ -104,6 +105,8 @@ html {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-html {
-  overflow: hidden;
+#win1 {
+  font-size: 7vw;
+  font-family: myFont;
+  color: #f8c7cc;
 }/*# sourceMappingURL=level1.css.map */

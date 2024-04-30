@@ -14,3 +14,9 @@ function nextPage() {
 function nextPage1() {
     window.location="./Level 1/level1.html";
 }
+function nextPage2() {
+    window.location="../Level 2/index.html";
+}
+function nextPage3() {
+    window.location="../Level 2/winPage2.html";
+}

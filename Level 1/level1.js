@@ -29,7 +29,7 @@ $(document).ready(function() {
 
             //Check to see if the player reaches the end
             if(playerX === 380 && playerY === 380){
-                window.location="../Level 2/index.html";
+              window.location = "winPage1.html"
             }
 
         }
@@ -257,26 +257,3 @@ $(document).ready(function() {
     //Create the player and append it to the board
     $('#maze').append('<div class="player" id="player" style="top: '+ playerY + 'px; left: ' + playerX + 'px;"> <img src="../assests/Idle (1).png" style="max-height:20px; max-width:20px;"></div>')
   })
-  var seconds = 0;
-  var minutes = 0;
-  function getTime() {
-    seconds++;
-    //if the time is 60 seconds, it converts it into a minute
-    if (seconds == 60) {
-        seconds = 0;
-        minutes++;
-    }
-    //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
-    var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
-    document.getElementById('countUp').innerHTML = finalTime;
-  }
-  var timer = setInterval(getTime,1000)
-  function restart() {
-    // alert("hi")
-    seconds = 0;
-    minutes = 0;
-    playerX = 0;
-    playerY = 0;
-    movePlayer(20, 0);
-    console.log(playerY)
-  }

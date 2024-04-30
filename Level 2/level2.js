@@ -25,8 +25,7 @@ $(document).ready(function() {
 
             //Check to see if the player reaches the end
             if (playerX === 480 && playerY === 480) {
-                alert("Congrats, your time was" + /*JUVI ADD SCORE/TIME IDK*/0)
-                window.location = "../Level 3/index.html";
+                window.location = "winPage2.html";
             }
             if (playerX === 480 && playerY === 400 && z == 0) {
                 $('#maze').append('<div class="wall" style="top: 440px; left: 480px;"></div>');
@@ -370,18 +369,4 @@ $(document).ready(function() {
     $("#start").css({
         backgroundcolor: "white",
     })
-
-    var seconds = 0;
-    var minutes = 0;
-    function getTime() {
-        seconds++;
-        //if the time is 60 seconds, it converts it into a minute
-        if (seconds == 60) {
-            seconds = 0;
-            minutes++;
-        }
-        //has a little if else statement by checking if the seconds is double digits or not, just for formatting.
-        var finalTime = minutes + ':' + (seconds < 10 ? '0' : '')  + seconds;
-        document.getElementById('countUp').innerHTML = finalTime;
-    }
 })

@@ -1,9 +1,10 @@
 $primary-color: #57886c;
 $secondary-color:#81a684;
 $tertiary-color:#f8c7cc;
-body#level1 {
+body#level2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    overflow-x: hidden;
 }
 html {
     background-color: #57886c;
@@ -12,7 +13,7 @@ html {
 
 @font-face {
     font-family: myFont;
-    src: url(../assests/SantasSleighFull\ Deluxe.ttf);
+    src: url(../assests/SantasSleighFull.ttf);
 }
 #maze {
     margin: 20px auto;
@@ -93,7 +94,4 @@ html {
 #countUp {
     color: $tertiary-color;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-html {
-    overflow: hidden;
 }
