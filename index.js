@@ -18,4 +18,5 @@ function nextPage2() {
     window.location="../Level 2/index.html";
 }
 function nextPage3() {
+    window.location="../Level 3/index.html";
 }
